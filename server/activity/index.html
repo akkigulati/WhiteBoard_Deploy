@@ -64,6 +64,9 @@
             <div class="tool">
                 <img src="./NewIcons/Redo.svg" alt="" class="tool-img" id="redo" onclick="handleTool('redo')">
             </div>
+            <div class="tool">
+                <img src="./NewIcons/Download.svg" alt="" class="tool-img" id="redo" onclick="handleTool('download')">
+            </div>
         </div>
     </div>
     </div>
@@ -72,7 +75,7 @@
         let board = document.querySelector(".board");
         board.height = window.innerHeight;
         board.width = window.innerWidth;
-        //  2d , 3d ,Webgl
+        //2d , 3d ,Webgl
         let ctx = board.getContext("2d");
         window.addEventListener("resize", function () {
             board.height = window.innerHeight;
@@ -81,15 +84,16 @@
         })
     </script>
     <!-- client -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.4/socket.io.js"></script>
-        <script>
-            const socket=io.connect("http://localhost:3000");
-        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.4/socket.io.js"></script>
+    <script>
+        const socket = io.connect("https://r-whiteboard.herokuapp.com");
+    </script>
     <script src="utility.js"></script>
     <script src="tools.js"></script>
     <script src="sticky.js"></script>
     <script src="img.js"></script>
-    <script src="canavs.js"></script>
+    <script src="canvas.js"></script>
+    <script src="reciever.js"></script>
 </body>
 
 </html>
